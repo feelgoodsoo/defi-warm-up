@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts/RewardToken.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">contracts/</a> RewardToken.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/19</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/22</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/24</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.9;
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+&nbsp;
+/*
+ * Notice
+ * 토큰 decimals는 6으로 설정 필요 -&gt; 1PAC = 1pac * 1e6
+    - **name** = Pacific
+    - **symbol** = PAC
+ * function별 event 호출
+ * 
+ */
+contract RewardToken is ERC20, Ownable {
+    //uint256 public maxSupply; //  ERC20 contract를 상속받아 totalSupply 변수가 이미 존재하므로 생략.
+    uint256 public swapRatio;
+    bool public paused;
+    mapping(address =&gt; bool) isMinter; // these addresses have authority to mint. contract Owner has highest authority(role), minters have the authority below it.
+    /**********
+     * EVENTS *
+     **********/
+&nbsp;
+    /**
+     * 모든 event의 param으로 epoch timestamp 추가 (후에 에러 발생시 이벤트를 백업하고 있는 미들웨어에서 디버깅 하기 위해)
+     */
+&nbsp;
+    // 유저 주소, 맡긴 수량(유저가 맡긴 ETH양)
+    event Deposit(address indexed user, uint256 amount, uint epoch);
+&nbsp;
+    // 유저 주소, 찾은 수량(유저가 받게 되는 양이 아닌, deposit에서 차감되는 양을 의미)
+    event Withdraw(address indexed user, uint256 amount, uint epoch);
+&nbsp;
+    // 리워드 토큰을 mint하는 권한자 지정
+    event SetMinter(address minter, uint epoch);
+&nbsp;
+    // swapRatio 지정
+    event UpdateSwapRatio(uint256 swapRatio, uint epoch);
+&nbsp;
+    /*************
+     * FUNCTIONS *
+     *************/
+&nbsp;
+<span class="fstat-no" title="function not covered" >    constructor(uint256 maxSupply_) ERC20("Pacific", "PAC") {</span>
+        //maxSupply = maxSupply_; // ERC20 contract를 상속받아 totalSupply 변수가 이미 존재하므로 생략. 다만 자동화 채점을 의식하여 인스턴스 파라미터는 변경하지 않았음
+        swapRatio = 100 * 1e12; // 100 * 10^12
+        isMinter[msg.sender] = true; // contract owner has Minter Role by default.
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function decimals() public pure override returns (uint8) {</span>
+<span class="cstat-no" title="statement not covered" >        return 6;</span>
+    }
+&nbsp;
+    /* deposit은 ETH를 맡기는 행위이며, 그 결과 유저는 RewardToken 획득
+     * deposit시 A개의 ETH를 맡길 경우, A / swapRatio 만큼의 rewardToken을 획득 -&gt; 5개의 ETH deposit시 5 *1e18 / 100 * 10^12 개의 reward token 획득
+     * rewardToken이 곧바로 mint 되어 deposit 실행자에게 전달될 것
+     */
+<span class="fstat-no" title="function not covered" >    function deposit() external payable {</span>
+        // pause Check
+<span class="cstat-no" title="statement not covered" >        if (isNotPaused()) {</span>
+<span class="cstat-no" title="statement not covered" >            _mint(msg.sender, msg.value / swapRatio)</span>;
+<span class="cstat-no" title="statement not covered" >            emit Deposit(msg.sender, msg.value, block.timestamp);</span>
+        }
+    }
+&nbsp;
+    /* withdraw는 RewardToken을 반환하고 맡긴 ETH를 찾는 행위
+     * withdraw시 B개를 인출할 경우, B개의 reward token을 반환하고 B * swapRatio 만큼 ETH를 획득.
+     * 반환 : burn(totalSupply --)
+     */
+<span class="fstat-no" title="function not covered" >    function withdraw(uint256 amount) external {</span>
+        // pause Check
+<span class="cstat-no" title="statement not covered" >        if (isNotPaused()) {</span>
+            //reward token 반환
+<span class="cstat-no" title="statement not covered" >            _burn(msg.sender, amount)</span>;
+            //ETH 환급
+<span class="cstat-no" title="statement not covered" >            ethTransfer(payable(msg.sender), amount * swapRatio)</span>;
+<span class="cstat-no" title="statement not covered" >            emit Withdraw(msg.sender, amount, block.timestamp);</span>
+        }
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function ethTransfer(address payable _to, uint _amount) internal onlyOwner {</span>
+        // Note that "to" is declared as payable
+<span class="cstat-no" title="statement not covered" >        (bool success, ) = _to.call{value: _amount}("");</span>
+<span class="cstat-no" title="statement not covered" >        require(success, "Failed to send Ether")</span>;
+    }
+&nbsp;
+    /* (RewardToken 컨트랙트가 소유한 ETH의 개수 / rewardToken의 totalSupply)를 반환 */
+<span class="fstat-no" title="function not covered" >    function realRatio() public view returns (uint256) {</span>
+        // implements here
+<span class="cstat-no" title="statement not covered" >        return address(this).balance / super.totalSupply();</span>
+    }
+&nbsp;
+    /**********
+     * ADMINS *
+     **********/
+&nbsp;
+    /* setMinter를 통해 지정된 자만 mint 가능. 이는 ownable의 관리자와는 다름.
+     * rewardToken을 관리자가 임의로 발행 가능
+     * 1 token = 1 * (10 ** decimals)
+     */
+<span class="fstat-no" title="function not covered" >    function mint(address account, uint256 amount) external {</span>
+        //auth Check
+<span class="cstat-no" title="statement not covered" >        require(isMinter[msg.sender], "you don't have authority to mint.")</span>;
+        //pause Check
+<span class="cstat-no" title="statement not covered" >        if (isNotPaused()) {</span>
+<span class="cstat-no" title="statement not covered" >            _mint(account, amount)</span>;
+        }
+    }
+&nbsp;
+    /*
+     * 관리자 전용 함수,  ownable을 구현하여 onlyOwner를 적용
+     * 토큰을 발행하는 관리자를 지정
+     */
+<span class="fstat-no" title="function not covered" >    function setMinter(address minter_) external onlyOwner {</span>
+        // implements here
+        isMinter[minter_] = true;
+<span class="cstat-no" title="statement not covered" >        emit SetMinter(minter_, block.timestamp);</span>
+    }
+&nbsp;
+    /*
+     * 관리자 전용 함수, ownable을 구현하여 onlyOwner를 적용
+     * deposit, withdraw 시의 교환 비율
+     * 변경하려는 swapRatio는 다음 값 이하여야 하며, 그렇지 않을 경우 revert 발생 필요
+     * nextSwapRatio ≤ rewardToken 컨트랙트가 가진 ETH의 양 / reward token의 totalSupply
+     */
+<span class="fstat-no" title="function not covered" >    function updateSwapRatio(uint256 swapRatio_) external onlyOwner {</span>
+<span class="cstat-no" title="statement not covered" >        require(swapRatio_ &lt;= realRatio(), "Invalid swap ratio")</span>;
+        swapRatio = swapRatio_;
+<span class="cstat-no" title="statement not covered" >        emit UpdateSwapRatio(swapRatio_, block.timestamp);</span>
+    }
+&nbsp;
+    /*
+     * 관리자 전용 함수, ownable을 구현하여 onlyOwner를 적용
+     * pause 발동시, 하기 함수 실행 불가 -&gt; mint, depoist, withdraw
+     * pause를 다시 실행할 시 unpause 처리 (토글방식)
+     */
+<span class="fstat-no" title="function not covered" >    function pause() external onlyOwner {</span>
+        paused = !paused;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function isNotPaused() public view returns (bool) {</span>
+<span class="cstat-no" title="statement not covered" >        if (paused == false) {</span>
+<span class="cstat-no" title="statement not covered" >            return true;</span>
+        }
+    }
+&nbsp;
+    receive() external payable {}
+&nbsp;
+<span class="fstat-no" title="function not covered" >    fallback() external payable {}</span>
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Sep 01 2023 21:06:51 GMT+0900 (Korean Standard Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

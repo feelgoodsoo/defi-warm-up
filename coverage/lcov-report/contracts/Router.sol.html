@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts/Router.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">contracts/</a> Router.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/17</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/30</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.9;
+&nbsp;
+import "./Bank.sol";
+&nbsp;
+contract Router {
+    address public bank;
+&nbsp;
+<span class="fstat-no" title="function not covered" >    constructor(address bank_) {</span>
+        bank = bank_;
+    }
+&nbsp;
+    /*
+    - Bank의 showLeaders를 page 별로 출력해주는 함수
+    - page size는 10, 즉 한 페이지에 10개의 아이템이 출력
+    - page는 1번 부터 시작
+    - 2 page의 경우, rank 11~20까지가 출력
+    - rank25번이 마지막이고 3 page를 요청한다면, 21~25가 출력
+    */
+<span class="fstat-no" title="function not covered" >    function getUsers(</span>
+        uint256 page
+    )
+        external
+        view
+        returns (address[] memory users_, uint256[] memory amounts_)
+    {
+        //1페이지당 보여줄 유저수
+<span class="cstat-no" title="statement not covered" >        uint itemsPerPage = 10;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        Bank bankContract = Bank(payable(bank));</span>
+<span class="cstat-no" title="statement not covered" >        (</span>
+            address[] memory userLists,
+            uint256[] memory amountLists
+        ) = bankContract.showLeaders(bankContract.DepositUserNum());
+&nbsp;
+        // 전체 리더 수
+<span class="cstat-no" title="statement not covered" >        uint totalLeaders = userLists.length;</span>
+&nbsp;
+        /*
+        1페이지 -&gt; userLists[0] ~ userLists[9]
+        2페이지 -&gt; userLists[10] ~ userLists[19]
+        3페이지 -&gt; userLists[20] ~ userLists[29]
+        */
+<span class="cstat-no" title="statement not covered" >        uint startIdx = (page - 1) * itemsPerPage;</span>
+&nbsp;
+        // 요청 페이지가 마지막인지 아닌지 체크하여 리턴 배열 수 결정
+<span class="cstat-no" title="statement not covered" >        uint itemCount = totalLeaders - startIdx;</span>
+<span class="cstat-no" title="statement not covered" >        if (itemCount &gt; itemsPerPage) {</span>
+            itemCount = itemsPerPage;
+        }
+&nbsp;
+         users_ = new address[](itemCount); // Initialize the users_ array
+        amounts_ = new uint256[](itemCount); // Initialize the amounts_ array
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        for (uint i = 0; i &lt; itemCount; i++) {</span>
+            users_[i] = userLists[startIdx];
+            amounts_[i] = amountLists[startIdx];
+            startIdx++;
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return (users_, amounts_);</span>
+    }
+&nbsp;
+    /*
+    - user 주소를 넣어, 해당 유저의 여러 정보를 동시에 얻는 기능
+    - 이 때 options는 abi.encode(showDeposit, showStake) 되어 호출
+    - ex) abi.encode(false, true)
+    */
+<span class="fstat-no" title="function not covered" >    function getUserInfo(</span>
+        address user,
+        bytes calldata options
+    )
+        external
+        view
+        returns (
+            uint256 depositBalance,
+            uint256 depositClaimedAt,
+            uint256 stakeBalance,
+            uint256 stakeClaimedAt,
+            bool isBlackUser,
+            uint256 blockNumber
+        )
+    {
+        // implements here
+        //
+        // [info] options에 대한 정보
+        // options = abi.encode(showDeposit, showStake)
+        // showDeposit: boolean
+        // showStake: boolean
+        // 위 규격에 맞춰 options를 decode 한 후 user 정보를 돌려줄 것
+<span class="cstat-no" title="statement not covered" >        (bool showDeposit, bool showStake) = abi.decode(options, (bool, bool));</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        Bank bankContract = Bank(bank);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (showDeposit) {</span>
+<span class="cstat-no" title="statement not covered" >            (uint256 depositAmount, uint256 depositClaimTime) = bankContract</span>
+                .deposited(user);
+&nbsp;
+            depositBalance = depositAmount;
+            depositClaimedAt = depositClaimTime;
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (showStake) {</span>
+<span class="cstat-no" title="statement not covered" >            (uint256 stakeAmount, uint256 stakeClaimTime) = bankContract.staked(</span>
+                user
+            );
+            stakeBalance = stakeAmount;
+            stakeClaimedAt = stakeClaimTime;
+        }
+        isBlackUser = Bank(bank).blackLists(user);
+        blockNumber = block.number;
+<span class="cstat-no" title="statement not covered" >        return (</span>
+            depositBalance,
+            depositClaimedAt,
+            stakeBalance,
+            stakeClaimedAt,
+            isBlackUser,
+            blockNumber
+        );
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function encode(bool showDeposit, bool showStake) public returns(bytes memory){</span>
+<span class="cstat-no" title="statement not covered" >       return abi.encode(showDeposit, showStake);</span>
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Sep 01 2023 21:06:51 GMT+0900 (Korean Standard Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+describe("contractName", function() {
+    
+    describe("UnitTest-1", function () {
+      it("method-A", async function () {}),
+      it("method-B", async function () {}),
+      it("method-C", async function () {});
+    }),
+
+    describe("UnitTest-2", function () {
+      it("method-A", async function () {}),
+      it("method-B", async function () {}),
+      it("method-C", async function () {});
+    }),
+
+    describe("UnitTest-3", function () {
+      it("method-A", async function () {}),
+      it("method-B", async function () {}),
+      it("method-C", async function () {});
+    })
+})
