@@ -1,3 +1,9 @@
+## About
+
+- this project implements simple-banking system with ETH
+- including ERC-721, ERC-20 contracts
+- to get more information, checkout contracts
+
 ## Setup
 
 ```bash
